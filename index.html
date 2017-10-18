@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,85 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section><h2>Welcome!</h2><p>The following slides contain links to each of the classes. Below each one you will find links to the exercises.</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## [Class #1](class1.html)
+							### Hypothesis tests
+							### Contingency tables
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Exercises
+							* [Exercise 1.1](exercise1.1.html)
+							* [Exercise 1.2](exercise1.2.html)
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## [Class #2](class2.html)
+							### Analysis of variance
+							### Regression analysis
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Exercises
+							* [Exercise 2.1](exercise2.1.html)
+							* [Exercise 2.2](exercise2.2.html)
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## [Class #3](class3.html)
+							### Clustering analysis
+							### Ordination analysis
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Exercises
+							* [Exercise 3.1](exercise3.1.html)
+							* [Exercise 3.2](exercise3.2.html)
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## [Class #4](class4.html)
+							### Automation & reproducibility
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Exercises
+							* [Exercise 4.1](exercise4.1.html)
+							* [Exercise 4.2](exercise4.2.html)
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## [Class #5](class5.html)
+							### Biological sequence data
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Exercises
+							* [Exercise 5.1](exercise5.1.html)
+							* [Exercise 5.2](exercise5.2.html)
+						</textarea>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +114,9 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				width: 768,
+				height: 1024,
+				margin: 0.15,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
