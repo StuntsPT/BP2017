@@ -1,9 +1,9 @@
-# Simple test
-
-text test
+## Hypothesis tests
 
 ---
 
-# New slide test
+## What are they?
 
-with text
+
+---
+
