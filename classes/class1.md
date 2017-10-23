@@ -67,3 +67,4 @@ When the goal is to make inferences regarding the population, based on a sample.
 	* "Is this sample's value significantly different from a specific value?" <!-- .element: class="fragment" data-fragment-index="1" -->
 <center>![Single sample test](C1_assets/Single_sample.png)</center> <!-- .element: class="fragment" data-fragment-index="2" -->
 
+<p>The *t-test*</p> <!-- .element: class="fragment" data-fragment-index="3" -->
