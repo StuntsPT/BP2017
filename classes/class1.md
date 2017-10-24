@@ -61,10 +61,78 @@ When the goal is to make inferences regarding the population, based on a sample.
 
 ---
 
-### Single sample
+### Student's *t-test*
+
+The *t-test* can be used to:
+* Compare a sample with a value <!-- .element: class="fragment" data-fragment-index="1" -->
+* Compare two independent samples <!-- .element: class="fragment" data-fragment-index="2" -->
+* Compare two dependent samples <!-- .element: class="fragment" data-fragment-index="3" -->
+
+![T-test distribution](C1_assets/t-dists.png) <!-- .element: class="fragment" data-fragment-index="4" -->
+
+|||
+
+### Student's *t-test*
+
+```R
+x <- seq(-4, 4, length=100)
+hx <- dnorm(x)
+
+degf <- c(1, 3, 8, 30)
+colors <- c("red", "blue", "darkgreen", "gold", "black")
+labels <- c("df=1", "df=3", "df=8", "df=30", "normal")
+
+plot(x, hx, type="l", lty=2, xlab="x value",
+     ylab="Density", main="Comparison of t Distributions")
+
+for (i in 1:4){
+    lines(x, dt(x,degf[i]), lwd=2, col=colors[i])
+}
+
+legend("topright", inset=.05, title="Distributions",
+       labels, lwd=2, lty=c(1, 1, 1, 1, 2), col=colors)
+
+```
+
+|||
+
+### Student's *t-test*
+
+* A *t-value* is obtained by comparing the two datasets
+* This value is compared to the tails of the distribution
+
+![norm. dist with alpha](C1_assets/alpha.png)
+
+---
+
+### Single sample *t-test*
 
 * Single sample tests are used when we want to compare a sample against a single value:
 	* "Is this sample's value significantly different from a specific value?" <!-- .element: class="fragment" data-fragment-index="1" -->
 <center>![Single sample test](C1_assets/Single_sample.png)</center> <!-- .element: class="fragment" data-fragment-index="2" -->
 
-<p>The *t-test*</p> <!-- .element: class="fragment" data-fragment-index="3" -->
+---
+
+### Single sample *t-test* example
+
+Is the pH value of water samples significantly different from "neutral" (pH=7)?
+
+What about the "reference value for rivers" (pH=7.7)? <!-- .element: class="fragment" data-fragment-index="1" -->
+
+Let's consider: <!-- .element: class="fragment" data-fragment-index="2" -->
+* Data from "Dados_diatoms_heavymetals.csv" <!-- .element: class="fragment" data-fragment-index="3" -->
+* Two tailed test <!-- .element: class="fragment" data-fragment-index="4" -->
+* Alpha=0.05 <!-- .element: class="fragment" data-fragment-index="5" -->
+
+|||
+
+### Single sample *t-test* example
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+ph = diatoms$pH
+
+t.test(ph, mu=7, conf.level=0.95)
+t.test(ph, mu=7.7, conf.level=0.95)
+```
+
