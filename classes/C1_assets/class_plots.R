@@ -40,7 +40,73 @@ legend("topright", inset=.05, title="Distributions",
        labels, lwd=2, lty=c(1), col=c("grey"))
 
 ###########
-# Diatom data
+# Single sample
+# t-test
 
 diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
 ph = diatoms$pH
+
+shapiro.test(ph)
+
+t.test(ph, mu=7, conf.level=0.95)
+t.test(ph, mu=7.7, conf.level=0.95)
+
+# Wilcoxon test
+
+diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
+zn = diatoms$Zn
+
+shapiro.test(zn)
+
+wilcox.test(zn, mu=5000, alternative="less")
+wilcox.test(zn, mu=10, alternative="greater")
+
+###################
+# 2 samples
+# t-test
+
+diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
+north_rivers_doxy = diatoms$Doxy[diatoms$Stream == "ER" | diatoms$Stream == "BR" | diatoms$Stream == "SR"]
+south_rivers_doxy = diatoms$Doxy[diatoms$Stream == "AR" | diatoms$Stream == "CC" | diatoms$Stream == "SPR"]
+
+shapiro.test(north_rivers_doxy)
+shapiro.test(south_rivers_doxy)
+
+t.test(x=north_rivers_doxy, y=south_rivers_doxy, conf.level=0.95)
+
+# Man-Withney
+
+diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
+north_rivers_alk = diatoms$Alk[diatoms$Stream == "ER" | diatoms$Stream == "BR" | diatoms$Stream == "SR"]
+south_rivers_alk = diatoms$Alk[diatoms$Stream == "AR" | diatoms$Stream == "CC" | diatoms$Stream == "SPR"]
+
+shapiro.test(north_rivers_alk)
+shapiro.test(south_rivers_alk)
+
+wilcox.test(x=north_rivers_alk, y=south_rivers_alk, conf.level=0.95)
+
+###################
+# 2 dependent samples
+# t-test
+
+diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
+ph = diatoms$pH
+
+ph2017 = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/diatoms_ph_2017.csv")$pH
+
+shapiro.test(ph)
+shapiro.test(ph2017)
+
+t.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
+
+# Wilcoxon
+
+diatoms = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/Dados_diatoms_heavymetals.csv")
+ph = diatoms$pH
+
+ph2017 = read.csv("/home/francisco/MEOCloud/Classes/BP2017/classes/C1_assets/diatoms_ph_2017.csv")$pH
+
+shapiro.test(ph)
+shapiro.test(ph2017)
+
+wilcox.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)

@@ -33,7 +33,8 @@
 
 ![Pop vs sampling](C1_assets/Pop_vs_sampling.png)
 
-When the goal is to make inferences regarding the population, based on a sample. <!-- .element: class="fragment" data-fragment-index="1" -->
+When the goal is to make inferences regarding the population
+ based on a sample. <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -48,12 +49,12 @@ When the goal is to make inferences regarding the population, based on a sample.
 
 * Parametric tests require the data to conform to some parameters
 	* These vary from test to test <!-- .element: class="fragment" data-fragment-index="1" -->
-* Non-parametric tests also have assumptions: <!-- .element: class="fragment" data-fragment-index="2" -->
+* Non-parametric (N-P) tests also have assumptions: <!-- .element: class="fragment" data-fragment-index="2" -->
 	* They assume the variables' distributions are similar <!-- .element: class="fragment" data-fragment-index="3" -->
 
 </br>
 
-<font color="red">Parametric tests usually have more statistical power than their non-parametric counterparts.</font> <!-- .element: class="fragment" data-fragment-index="4" -->
+<font color="red">Parametric tests usually have more statistical power than their N-P counterparts.</font> <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
@@ -75,22 +76,31 @@ The *t-test* can be used to:
 ### Student's *t-test*
 
 ```R
-x <- seq(-4, 4, length=100)
+x <- seq(-4
+ 4, length=100)
 hx <- dnorm(x)
 
-degf <- c(1, 3, 8, 30)
-colors <- c("red", "blue", "darkgreen", "gold", "black")
-labels <- c("df=1", "df=3", "df=8", "df=30", "normal")
+degf <- c(1
+ 3, 8, 30)
+colors <- c("red"
+ "blue", "darkgreen", "gold", "black")
+labels <- c("df=1"
+ "df=3", "df=8", "df=30", "normal")
 
-plot(x, hx, type="l", lty=2, xlab="x value",
-     ylab="Density", main="Comparison of t Distributions")
+plot(x
+ hx, type="l", lty=2, xlab="x value",
+     ylab="Density"
+ main="Comparison of t Distributions")
 
 for (i in 1:4){
-    lines(x, dt(x,degf[i]), lwd=2, col=colors[i])
+    lines(x
+ dt(x,degf[i]), lwd=2, col=colors[i])
 }
 
-legend("topright", inset=.05, title="Distributions",
-       labels, lwd=2, lty=c(1, 1, 1, 1, 2), col=colors)
+legend("topright"
+ inset=.05, title="Distributions",
+       labels
+ lwd=2, lty=c(1, 1, 1, 1, 2), col=colors)
 
 ```
 
@@ -105,9 +115,9 @@ legend("topright", inset=.05, title="Distributions",
 
 ---
 
-### Single sample *t-test*
+### Single sample test
 
-* Single sample tests are used when we want to compare a sample against a single value:
+* Single sample tests are used to compare a sample against a single value:
 	* "Is this sample's value significantly different from a specific value?" <!-- .element: class="fragment" data-fragment-index="1" -->
 <center>![Single sample test](C1_assets/Single_sample.png)</center> <!-- .element: class="fragment" data-fragment-index="2" -->
 
@@ -132,7 +142,140 @@ Let's consider: <!-- .element: class="fragment" data-fragment-index="2" -->
 diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
 ph = diatoms$pH
 
-t.test(ph, mu=7, conf.level=0.95)
-t.test(ph, mu=7.7, conf.level=0.95)
+shapiro.test(ph)
+
+t.test(ph
+ mu=7, conf.level=0.95)
+t.test(ph
+ mu=7.7, conf.level=0.95)
+```
+
+---
+
+### N-P equivalent - Wilcoxon test
+
+Is the Zinc value of water samples lower than the WHO limit (5000 μg/L)?
+
+Is it above the reference value for rivers (10 μg/L)? <!-- .element: class="fragment" data-fragment-index="1" -->
+
+|||
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+zn = diatoms$Zn
+
+shapiro.test(zn)
+
+wilcox.test(zn
+ mu=5000, alternative="less")
+wilcox.test(zn
+ mu=10, alternative="greater")
+```
+
+---
+
+### 2 samples tests
+
+* 2 samples tests are used to compare the values of two samples.
+	* "Are the values of these two samples significantly different from each other?" <!-- .element: class="fragment" data-fragment-index="1" -->
+
+![Two indep. samples](C1_assets/Two_indep_samples.png) <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+### 2 samples *t-test* example
+
+Is the "Dissolved oxygen" different between Northern and Southern rivers?
+
+* Northern rivers: <!-- .element: class="fragment" data-fragment-index="1" -->
+	* "Eagle River" <!-- .element: class="fragment" data-fragment-index="1" -->
+	* "Blue River" <!-- .element: class="fragment" data-fragment-index="1" -->
+	* "Snake River" <!-- .element: class="fragment" data-fragment-index="1" -->
+* Southern rivers: <!-- .element: class="fragment" data-fragment-index="2" -->
+	* "Arkansas River" <!-- .element: class="fragment" data-fragment-index="2" -->
+	* "Chalk Creek" <!-- .element: class="fragment" data-fragment-index="2" -->
+	* "South Platte River" <!-- .element: class="fragment" data-fragment-index="2" -->
+
+|||
+
+### 2 samples *t-test* example
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+north_rivers_doxy = diatoms$Doxy[diatoms$Stream == "ER" | diatoms$Stream == "BR" | diatoms$Stream == "SR"]
+south_rivers_doxy = diatoms$Doxy[diatoms$Stream == "AR" | diatoms$Stream == "CC" | diatoms$Stream == "SPR"]
+
+shapiro.test(north_rivers_doxy)
+shapiro.test(south_rivers_doxy)
+
+t.test(x=north_rivers_doxy
+ y=south_rivers_doxy, conf.level=0.95)
+```
+
+---
+
+### N-P equivalent - Mann‐Whitney
+
+Is the "Alkalinity" different between Northern and Southern rivers?
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+north_rivers_alk = diatoms$Alk[diatoms$Stream == "ER" | diatoms$Stream == "BR" | diatoms$Stream == "SR"]
+south_rivers_alk = diatoms$Alk[diatoms$Stream == "AR" | diatoms$Stream == "CC" | diatoms$Stream == "SPR"]
+
+shapiro.test(north_rivers_alk)
+shapiro.test(south_rivers_alk)
+
+wilcox.test(x=north_rivers_alk
+ y=south_rivers_alk, conf.level=0.95)
+```
+
+---
+
+### Dependent samples
+
+If the samples are not independent
+ the "normal" tests cannot be used.
+
+* Dependent samples are measurements taken from linked data: <!-- .element: class="fragment" data-fragment-index="1" -->
+	* Blood sugar levels in patients
+ before and after eating <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Size of the left and right pectoral fins of fish <!-- .element: class="fragment" data-fragment-index="3" -->
+
+![Dependent samples](C1_assets/Dependent_samples.png) <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
+### Dependent samples *t-test* example
+
+Has the rivers' pH changed significantly in the last 25 years?
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+ph = diatoms$pH
+
+ph2017 = read.csv("/path/to/diatoms_ph_2017.csv")$pH
+
+shapiro.test(ph)
+shapiro.test(ph2017)
+
+t.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
+```
+
+---
+
+### N-P equivalent - Paired Wilcoxon test
+
+```R
+diatoms = read.csv("/path/to/Dados_diatoms_heavymetals.csv")
+ph = diatoms$pH
+
+ph2017 = read.csv("/path/to/diatoms_ph_2017.csv")$pH
+
+shapiro.test(ph)
+shapiro.test(ph2017)
+
+wilcox.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
+
 ```
 
