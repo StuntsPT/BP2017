@@ -279,3 +279,27 @@ wilcox.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
 
 ```
 
+---
+
+## Sum up
+
+---
+
+### Single sample
+
+![Single sample](C1_assets/Single_sample_tests.png)
+
+---
+
+### Two independent samples
+
+![Independent samples](C1_assets/Two_indep_samples_tests.png)
+
+---
+
+### Two dependent samples
+
+![Single sample](C1_assets/Two_dep_samples_tests.png)
+
+
+
