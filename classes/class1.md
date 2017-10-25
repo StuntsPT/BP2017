@@ -311,14 +311,29 @@ wilcox.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
 
 ---
 
+### Type I and Type II errors
+
+|    Decision        |H0 True                                |H0 False                              |
+|--------------------|---------------------------------------|--------------------------------------|
+|**Do not Reject H0**|Correct                                |<font color="red">Type II Error</font>|
+|**Reject H0**       |<font color="green">Type I Error</font>|Correct                               |
+
+|||
+
+### Type II Error
+
+![Type II](C1_assets/TypeII.jpg)
+
+---
+
 ### Correcting for multiple tests
 
-* Bonferroni correction
-	* As simple as α/number of tests
-	* Deemed too conservative
-* FDR test
-	* Adjusts the p-value into a q-value
-	* Has more power at the cost of more false positives
+* Bonferroni correction <!-- .element: class="fragment" data-fragment-index="1" -->
+	* As simple as α/number of tests <!-- .element: class="fragment" data-fragment-index="1" -->
+	* Deemed too conservative <!-- .element: class="fragment" data-fragment-index="1" -->
+* FDR test <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Adjusts the p-value into a q-value <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Has more power at the cost of more false positives <!-- .element: class="fragment" data-fragment-index="2" -->
 
 |||
 
