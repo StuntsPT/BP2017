@@ -4,10 +4,6 @@
 
 ### Main questions
 
-</br>
-</br>
-</br>
-
 * What are they?
 * Why are the necessary? <!-- .element: class="fragment" data-fragment-index="2" -->
 * When can they be performed? <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -22,8 +18,6 @@
 * Used to compare two or more datasets <!-- .element: class="fragment" data-fragment-index="3" -->
 	* Sampled <!-- .element: class="fragment" data-fragment-index="4" -->
 	* Modeled <!-- .element: class="fragment" data-fragment-index="5" -->
-
-</br>
 
 <font color="red">The comparison is considered **significant** if the relationship between the tested datasets is unlikely to be a chance realization of H<sub>0</sub> according to a **pre-determined** threshold.</font> <!-- .element: class="fragment" data-fragment-index="6" -->
 
@@ -301,5 +295,37 @@ wilcox.test(x=ph, y=ph2017, paired=TRUE, conf.level=0.95)
 
 ![Single sample](C1_assets/Two_dep_samples_tests.png)
 
+---
 
+## Multiple tests
 
+[Mandatory XKCD](https://xkcd.com/882/) <!-- .element: class="fragment" data-fragment-index="1" -->
+
+---
+
+### The problem of multiple testing
+
+* The more inferences are made, the more likely errors are to occur
+* Therefore, significance levels need to be adjusted <!-- .element: class="fragment" data-fragment-index="2" -->
+* These should scale with the number of tests <!-- .element: class="fragment" data-fragment-index="3" -->
+
+---
+
+### Correcting for multiple tests
+
+* Bonferroni correction
+	* As simple as α/number of tests
+	* Deemed too conservative
+* FDR test
+	* Adjusts the p-value into a q-value
+	* Has more power at the cost of more false positives
+
+|||
+
+### Performing corrections
+
+```R
+p_vals = c(0.05, 0.01, 0.001, 0.08, 0.04, 0.03)
+p.adjust(p_vals, method="fdr")
+p.adjust(p_vals, method="bonferroni")
+```
