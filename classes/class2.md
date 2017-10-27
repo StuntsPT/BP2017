@@ -198,3 +198,12 @@ ness</div>
 </tbody></table> <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
+
+### Fisher's exact test
+
+* To be used on sets of two nominal variables
+* Tests whether the proportions of one variable are different depending on the value of the other variable <!-- .element: class="fragment" data-fragment-index="1" -->
+* Also called an "independence test" <!-- .element: class="fragment" data-fragment-index="2" -->
+* Can be used with small sample sizes <!-- .element: class="fragment" data-fragment-index="3" -->
+
+
