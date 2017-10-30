@@ -165,45 +165,107 @@ if(!require("XNomial")){
 
 * Tables in a matrix format
 * Each entry represents a variable frequency distribution <!-- .element: class="fragment" data-fragment-index="1" -->
+* Used to test whether the proportions of one variable are different for different values of the other variable <!-- .element: class="fragment" data-fragment-index="3" -->
+* Examples: <!-- .element: class="fragment" data-fragment-index="4" -->
+	* Are the class' grades different between male and female students? <!-- .element: class="fragment" data-fragment-index="4" -->
+	* Are the side effects of a new drug more prone to occur if it is taken at night or in the morning? <!-- .element: class="fragment" data-fragment-index="5" -->
 
-<table style="margin-left:auto;margin-right:auto;text-align:center;">
-<tbody><tr>
-<th style="line-height:1;">
-<div style="margin-left:2em;text-align:right;">Handed-<br>
-ness</div>
-<div style="margin-right:2em;text-align:left;">Gender</div>
-</th>
-<th>Right handed</th>
-<th>Left handed</th>
-<th>Total</th>
-</tr>
-<tr>
-<th>Male</th>
-<td>43</td>
-<td>9</td>
-<td>52</td>
-</tr>
-<tr>
-<th>Female</th>
-<td>44</td>
-<td>4</td>
-<td>48</td>
-</tr>
-<tr>
-<th>Total</th>
-<td>87</td>
-<td>13</td>
-<td>100</td>
-</tr>
-</tbody></table> <!-- .element: class="fragment" data-fragment-index="2" -->
+---
+
+### Chi² test of independence
+
+* Requires a "large" sample size
+* Is computationally simple <!-- .element: class="fragment" data-fragment-index="1" -->
+* Uses the "chi-square" distribution <!-- .element: class="fragment" data-fragment-index="2" -->
+
+![Chi² distribution](C2_assets/Chi2_dist.png) <!-- .element: class="fragment" data-fragment-index="3" -->
+
+|||
+
+### Chi² test of independence example
+
+* Suppose the following situation:
+	* A new drug for migraines is being tested
+	* It has some (uncommon) side effects <!-- .element: class="fragment" data-fragment-index="1" -->
+	* We want to know if the side effects occur more often when the drug is taken at night or in the morning <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Of the 4682 cases where the drug was taken at night, 30 reported side effects <!-- .element: class="fragment" data-fragment-index="3" -->
+	* Of the 8813 cases where it was taken in the morning, 76 reported side effects <!-- .element: class="fragment" data-fragment-index="4" -->
+
+|||
+
+### Chi² test of independence example
+
+```R
+R1 = c(4682, 30)
+R2 = c(8813, 76)
+
+side_effects_matrix = matrix(c(R1, R2),
+                             nrow=2,
+                             byrow=TRUE)
+
+# Naming if not mandatory:
+rownames(side_effects_matrix) = c("Night", "Morning")
+colnames(side_effects_matrix) = c("No.side.effects",
+                                  "Side.effects")
+
+
+chisq.test(side_effects_matrix,
+           correct=TRUE)
+```
+
+---
+
+### What about 'small' samples?
+
+* When the sample size is small, the Chi² test can be inaccurate
+* In these cases an exact test should be employed <!-- .element: class="fragment" data-fragment-index="1" -->
+	* Can be used with small samples <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Is computationally intensive <!-- .element: class="fragment" data-fragment-index="3" -->
+	* Fischer's exact test of independence <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
 ### Fisher's exact test
 
-* To be used on sets of two nominal variables
-* Tests whether the proportions of one variable are different depending on the value of the other variable <!-- .element: class="fragment" data-fragment-index="1" -->
-* Also called an "independence test" <!-- .element: class="fragment" data-fragment-index="2" -->
-* Can be used with small sample sizes <!-- .element: class="fragment" data-fragment-index="3" -->
+* Consider the following situation:
+	* Plants in a garden are watered in different intervals
+	* Daily, Weekly, Monthly and Quarterly <!-- .element: class="fragment" data-fragment-index="1" -->
+	* After a year, the plants' survival rate is measured <!-- .element: class="fragment" data-fragment-index="2" -->
+	* Does the watering frequency make a difference for these plants?  <!-- .element: class="fragment" data-fragment-index="3" -->
+
+<table>
+<tr><td>Frequency</td><td>Dead</td><td>Alive</td></tr>
+<tr><td>Daily</td><td>1</td><td>24</td></tr>
+<tr><td>Weekly</td><td>5</td><td>20</td></tr>
+<tr><td>Monthly</td><td>14</td><td>11</td></tr>
+<tr><td>Quarterly</td><td>11</td><td>14</td></tr>
+<tr><td></td></tr>
+</table> <!-- .element: class="fragment" data-fragment-index="4" -->
+
+|||
+
+
+### Fisher's exact test
+
+```R
+text_input =("
+Frequency  Dead  Alive
+Daily       1        24
+Weekly      5        20
+Monthly    14        11
+Quarterly  11        14
+")
+
+small_samples_matrix = as.matrix(read.table(textConnection(text_input),
+                                 header=TRUE,
+                                 row.names=1))
+
+fisher.test(small_samples_matrix,
+            alternative="two.sided")
+```
+
+---
+
+### Regression Analysis
 
 
