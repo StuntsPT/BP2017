@@ -87,3 +87,24 @@ exp = c(0.25, 0.5, 0.25)
 chisq.test(x=obs, p=exp)
 
 xmulti(obs=obs, expr=exp)
+
+#####
+# Independence tests
+# Chi²
+
+R1 = c(4682, 30)
+R2 = c(8813, 76)
+
+side_effects_matrix = matrix(c(R1, R2),
+                             nrow=2,
+                             byrow=TRUE)
+
+# Naming if not mandatory:
+rownames(side_effects_matrix) = c("Night", "Morning")
+colnames(side_effects_matrix) = c("No.side.effects",
+                     "Side.effects")
+
+
+chisq.test(side_effects_matrix,
+           correct=TRUE)
+
