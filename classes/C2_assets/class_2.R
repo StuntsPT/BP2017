@@ -108,3 +108,19 @@ colnames(side_effects_matrix) = c("No.side.effects",
 chisq.test(side_effects_matrix,
            correct=TRUE)
 
+# Fischer's exact test
+
+text_input =("
+Frequency  Dead  Alive
+Daily       1        24
+Weekly      5        20
+Monthly    14        11
+Quarterly  11        14
+")
+
+small_samples_matrix = as.matrix(read.table(textConnection(text_input),
+                                 header=TRUE,
+                                 row.names=1))
+
+fisher.test(small_samples_matrix,
+            alternative="two.sided")
