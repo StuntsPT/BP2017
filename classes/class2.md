@@ -47,8 +47,8 @@ plot(x, hx, type="l", lwd=2, xlab="x value",
          lines(x, dchisq(x,degf[i]), lwd=2, col=colors[i])
 	 }
 
-	 legend("topright", inset=.05, title="Distributions",
-	        labels, lwd=2, col=colors)
+legend("topright", inset=.05, title="Distributions",
+       labels, lwd=2, col=colors)
 ```
 
 ---
@@ -105,14 +105,14 @@ chisq.test(x=obs, p=exp)
 
 for (i in 1:length(obs)) {
     partial_obs = c(obs[i], sum(obs[-i]))
-        partial_exp = c(exp[i], sum(exp[-i]))
-	    part_chisq = chisq.test(x=partial_obs, p=partial_exp)
+    partial_exp = c(exp[i], sum(exp[-i]))
+    part_chisq = chisq.test(x=partial_obs, p=partial_exp)
 
-	        p_vals[i] = part_chisq$p.value
-		}
+    p_vals[i] = part_chisq$p.value
+    }
 
-		print(p_vals)
-		p.adjust(p_vals, method="fdr")
+print(p_vals)
+p.adjust(p_vals, method="fdr")
 ```
 
 ---
@@ -267,5 +267,51 @@ fisher.test(small_samples_matrix,
 ---
 
 ### Regression Analysis
+
+* What is it?
+* Why is it necessary? <!-- .element: class="fragment" data-fragment-index="1" -->
+* When can it be performed? <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+### What is a regression analysis?
+
+* Subset of ["Statistical Modeling"](https://en.wikipedia.org/wiki/Statistical_model)
+* Analyse the relationship between a dependent variable and an independent variable <!-- .element: class="fragment" data-fragment-index="1" -->
+* Used to estimate a regression function <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+### Why use regression analysis?
+
+* To know the strength of the association between the dependent and independent variables (r²)
+* To obtain an equation that can be used to predict unknown values <!-- .element: class="fragment" data-fragment-index="1" -->
+
+![Regression example](C2_assets/example_regression.png) <!-- .element: class="fragment" data-fragment-index="2" -->
+
+|||
+
+### Plot code
+
+```R
+height <- c(176, 154, 138, 196, 132, 176, 181, 169, 150, 175)
+bodymass <- c(82, 49, 53, 112, 47, 69, 77, 71, 62, 78)
+
+plot(bodymass, height)
+
+plot(bodymass, height, pch = 16, cex = 1.3, col = "blue",
+     main = "HEIGHT PLOTTED AGAINST BODY MASS",
+     xlab = "BODY MASS (kg)",
+     ylab = "HEIGHT (cm)")
+
+abline(lm(height ~ bodymass))
+
+```
+
+[Source](http://www.theanalysisfactor.com/linear-models-r-plotting-regression-lines/)
+
+---
+
+### Regression analysis assumptions
 
 
