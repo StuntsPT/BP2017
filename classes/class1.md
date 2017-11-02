@@ -5,7 +5,7 @@
 ### Main questions
 
 * What are they?
-* Why are the necessary? <!-- .element: class="fragment" data-fragment-index="2" -->
+* Why are they necessary? <!-- .element: class="fragment" data-fragment-index="2" -->
 * When can they be performed? <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
