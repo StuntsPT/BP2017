@@ -144,7 +144,7 @@ abline(lm(height ~ bodymass))
 
 
 #### Example 1
-# Correlation and regression
+# Correlation and regressionSpecies
 Input = ("
 Town                  State  Latitude  Species
 'Bombay Hook'          DE     39.217    128
