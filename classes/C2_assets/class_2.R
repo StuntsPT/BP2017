@@ -141,3 +141,61 @@ plot(bodymass, height, pch = 16, cex = 1.3, col = "blue",
      ylab = "HEIGHT (cm)")
 
 abline(lm(height ~ bodymass))
+
+
+#### Example 1
+# Correlation and regression
+Input = ("
+Town                  State  Latitude  Species
+'Bombay Hook'          DE     39.217    128
+'Cape Henlopen'        DE     38.800    137
+'Middletown'           DE     39.467    108
+'Milford'              DE     38.958    118
+'Rehoboth'             DE     38.600    135
+'Seaford-Nanticoke'    DE     38.583     94
+'Wilmington'           DE     39.733    113
+'Crisfield'            MD     38.033    118
+'Denton'               MD     38.900     96
+'Elkton'               MD     39.533     98
+'Lower Kent County'    MD     39.133    121
+'Ocean City'           MD     38.317    152
+'Salisbury'            MD     38.333    108
+'S Dorchester County'  MD     38.367    118
+'Cape Charles'         VA     37.200    157
+'Chincoteague'         VA     37.967    125
+'Wachapreague'         VA     37.667    114
+")
+
+Data = read.table(textConnection(Input),header=TRUE)
+
+# Plot the data
+plot(Species ~ Latitude,
+     data=Data,
+     pch=16,
+     xlab = "Latitude",
+     ylab = "Species")
+
+# Correlation
+cor.test( ~ Species + Latitude,
+          data=Data,
+          method = "pearson",
+          conf.level = 0.95)
+
+# Regression
+model = lm(Species ~ Latitude,
+           data = Data)
+
+summary(model)
+
+# Plot it
+int =  model$coefficient["(Intercept)"]
+slope =model$coefficient["Latitude"]
+
+plot(Species ~ Latitude,
+     data = Data,
+     pch=16,
+     xlab = "Latitude",
+     ylab = "Species")
+
+abline(int, slope,
+       lty=1, lwd=2, col="blue")
