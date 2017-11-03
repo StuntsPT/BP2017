@@ -284,10 +284,11 @@ fisher.test(small_samples_matrix,
 
 ### Why use regression analysis?
 
-* To know the strength of the association between the dependent and independent variables (r²)
-* To obtain an equation that can be used to predict unknown values <!-- .element: class="fragment" data-fragment-index="1" -->
+* To test if two variables are associated with each other (*p*-value)
+* To measure the strength of the association between variables (r²) <!-- .element: class="fragment" data-fragment-index="1" -->
+* To obtain an equation suitable to make predictions <!-- .element: class="fragment" data-fragment-index="2" -->
 
-![Regression example](C2_assets/example_regression.png) <!-- .element: class="fragment" data-fragment-index="2" -->
+![Regression example](C2_assets/example_regression.png) <!-- .element: class="fragment" data-fragment-index="3" -->
 
 |||
 
@@ -312,6 +313,119 @@ abline(lm(height ~ bodymass))
 
 ---
 
-### Regression analysis assumptions
+### Regression vs correlation
+
+* In correlation, both samples are random
+* In regression, one sample is controlled <!-- .element: class="fragment" data-fragment-index="1" -->
+* Can be hard to categorize <!-- .element: class="fragment" data-fragment-index="2" -->
+* The r² value is not as meaningful in regression as it is on correlation <!-- .element: class="fragment" data-fragment-index="3" -->
+
+---
+
+### Assumptions
+
+* Normality
+* Homecedasticity <!-- .element: class="fragment" data-fragment-index="1" -->
+* Linearity <!-- .element: class="fragment" data-fragment-index="2" -->
+* Independence <!-- .element: class="fragment" data-fragment-index="3" -->
+
+|||
+
+### Non-parametric alternative
+
+* Spearman's rank correlation (non-normal or non-homocedastic data)
+* Kendall correlation (non-linearity)
+
+---
+
+### A word of caution
+
+## <font color="red">Correlation does not imply causation</font> <!-- .element: class="fragment" data-fragment-index="1" -->
+
+---
+
+### Worked example - species diversity
+
+[Source](http://rcompanion.org/rcompanion/e_01.html)
+
+```R
+Input = ("
+Town                  State  Latitude  Species
+'Bombay Hook'          DE     39.217    128
+'Cape Henlopen'        DE     38.800    137
+'Middletown'           DE     39.467    108
+'Milford'              DE     38.958    118
+'Rehoboth'             DE     38.600    135
+'Seaford-Nanticoke'    DE     38.583     94
+'Wilmington'           DE     39.733    113
+'Crisfield'            MD     38.033    118
+'Denton'               MD     38.900     96
+'Elkton'               MD     39.533     98
+'Lower Kent County'    MD     39.133    121
+'Ocean City'           MD     38.317    152
+'Salisbury'            MD     38.333    108
+'S Dorchester County'  MD     38.367    118
+'Cape Charles'         VA     37.200    157
+'Chincoteague'         VA     37.967    125
+'Wachapreague'         VA     37.667    114
+")
+
+Data = read.table(textConnection(Input),header=TRUE)
+```
+
+|||
+
+### Worked example - species diversity
+
+Data plot
+
+```R
+plot(Species ~ Latitude,
+     data=Data,
+     pch=16,
+     xlab = "Latitude",
+     ylab = "Species")
+```
+
+|||
+
+### Worked example - species diversity
+
+Correlation & regression analyses
+
+```R
+# Correlation
+cor.test( ~ Species + Latitude,
+          data=Data,
+          method = "pearson",
+          conf.level = 0.95)
+
+# Regression
+model = lm(Species ~ Latitude,
+           data = Data)
+summary(model)
+```
+
+|||
+
+### Worked example - species diversity
+
+Plot the regression line
+
+```R
+int =  model$coefficient["(Intercept)"]
+slope =model$coefficient["Latitude"]
+
+plot(Species ~ Latitude,
+     data = Data,
+     pch=16,
+     xlab = "Latitude",
+     ylab = "Species")
+
+abline(int, slope,
+       lty=1, lwd=2, col="blue")
+```
+
+---
 
 
