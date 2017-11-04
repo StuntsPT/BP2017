@@ -4,7 +4,7 @@ First thing to do is download the data we are about to use.
 
 Link 1 - "[Cholesterol (fat) in blood, men, mmol/L](http://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdDU5SnRoQ0xlZWhwRUZ6RFNQV042enc&output=xlsx)".
 
-Link 2 - "[Cholesterol (fat) in blood, women, mmol/L](# http://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdGJHcHZkSUdBcU56aS1OT3lLeU4tRHc&output=xlsx)".
+Link 2 - "[Cholesterol (fat) in blood, women, mmol/L](http://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdGJHcHZkSUdBcU56aS1OT3lLeU4tRHc&output=xlsx)".
 
 Take a look at the data using any spreadsheet software.
 
