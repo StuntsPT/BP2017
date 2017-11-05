@@ -21,12 +21,12 @@ data_table = read.csv(url('data_url'), header=TRUE)
 
 2. Load the data from both URLs provided above into R variables called "male_chol" and "female_chol".
 
-3. Calaculate the mean and median values for each year. Plot the yearly evolution of these values from 1980 to 2008.
+3. Calaculate the mean and median values for each year. Plot the yearly evolution of these values from 1980 to 2008. Here are some hints: a) you want a "x,y" plot; b) to perform calculations in multiple coulmns, check out "?apply"; c) note that R will load column names as character strings, not as integers (and adds an "X") - you either have to manipulate these values, or recreate a vector for the years.
 
 ## 2. Hypothesis tests
 
 1. Are cholesterol levels different between men and women? Verify this for 1980, 1990, 2000 and 2008.
 
-2. Are there differences in blood cholesterol levels between 1980 and 2008 (test for both sexes)?
+2. Are there differences in blood cholesterol levels (test both sexes) between 1980 and 2008?
 
 3. "Mr. Anderson" ran into some trouble in 1999 and among other things, cholesterol levels were measured from some of his blood samples (3.666 mmol/L). "Mr. Brown" and "Mr. Jones" claim it is a special value, but "Mr. Smith" disgarees. Whose opinion do statistics you have learned today back up?
