@@ -1,6 +1,6 @@
 # Class 1 exercices - Part 1 
 
-First thing to do is download the data we are about to use.
+First thing to do is download the data we are about to use. We will use data from [gapminder](http://www.gapminder.org/data/).
 
 Link 1 - "[Cholesterol (fat) in blood, men, mmol/L](http://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdDU5SnRoQ0xlZWhwRUZ6RFNQV042enc&output=xlsx)".
 
