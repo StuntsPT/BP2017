@@ -2,7 +2,7 @@
 
 Once again, the first thing to do is download the data we are about to use. In this case it is a data table with the colours and size categories of "Magic beans".
 
-Link 1 - [Magic beans data]().
+Link 1 - [Magic beans data](https://raw.githubusercontent.com/StuntsPT/BP2017/master/classes/exercices/Magic_beans.csv).
 
 1. Take a look at the data using any spreadsheet software (this time it should be quick). 
 
