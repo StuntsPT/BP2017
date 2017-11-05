@@ -25,8 +25,8 @@ data_table = read.csv(url('data_url'), header=TRUE)
 
 ## 2. Hypothesis tests
 
-1. Are cholesterol levels different between men and women? Verify this for 1980, 1990, 2000 and 2008.
+1. Are cholesterol levels different between men and women? Verify this for 1980, 1990, 2000 and 2008. Assume normality.
 
-2. Are there differences in blood cholesterol levels (test both sexes) between 1980 and 2008?
+2. Are there differences in blood cholesterol levels (test both sexes) between 1980 and 2008? Assume normality.
 
-3. "Mr. Anderson" ran into some trouble in 1999 and among other things, cholesterol levels were measured from some of his blood samples (3.666 mmol/L). "Mr. Brown" and "Mr. Jones" claim it is a special value, but "Mr. Smith" disgarees. Whose opinion do statistics you have learned today back up?
+3. "Mr. Anderson" ran into some trouble in 1999 and among other things, cholesterol levels were measured from some of his blood samples (3.666 mmol/L). "Mr. Brown" and "Mr. Jones" claim it is a special value, but "Mr. Smith" disgarees. Whose opinion do statistics you have learned today back up? Be sure to convince "Mr. Smith". He doesn't like to be wrong (consider an alpha value of 0.01).
