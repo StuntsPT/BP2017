@@ -8,7 +8,7 @@ Link 2 - "[Cholesterol (fat) in blood, women, mmol/L](http://docs.google.com/spr
 
 1. Take a look at the data using any spreadsheet software.
 
-## 1. Data loading, descriptive statistics and plots
+## 1. Data loading, basic statistics and plots
 
 1. What do these datasets represent? Describe them briefly.
 
