@@ -348,3 +348,9 @@ p_vals = c(0.05, 0.01, 0.001, 0.08, 0.04, 0.03)
 p.adjust(p_vals, method="fdr")
 p.adjust(p_vals, method="bonferroni")
 ```
+
+---
+
+### A good reference
+
+[Handbook of Biological Statistics](http://www.biostathandbook.com)
