@@ -10,9 +10,9 @@ Link 1 - [Magic beans data](https://raw.githubusercontent.com/StuntsPT/BP2017/ma
 
 1. Load the data from the URLs provided above into R. Variable names are up to you from now on.
 
-2. Make a box plot of the size distibuition.
+2. Make a bar plot of the size distibuition.
 
-3. Make a box plot of the colour distribution. Wake up your inner OCD, and make sure the colours match.
+3. Make a bar plot of the colour distribution. Ensure the colours match!
 
 ## 2. Hypothesis tests
 
