@@ -15,8 +15,8 @@ Link 2 - "[Cholesterol (fat) in blood, women, mmol/L](http://docs.google.com/spr
 If you change the URL, you can get data from "Google spreadsheets" diretly fed into R. Here is an example:
 
 ```R
-data_url = http://docs.google.com/spreadsheet/pub?key=jd8aaueoçwedu77887ehdhdh783hqodh323jenc&output=csv
-data_table = read.csv(url('data_url'), header=TRUE)
+data_url = 'http://docs.google.com/spreadsheet/pub?key=jd8aaueoçwedu77887ehdhdh783hqodh323jenc&output=csv'
+data_table = read.csv(url(data_url), header=TRUE)
 ```
 
 2. Load the data from both URLs provided above into R variables called "male_chol" and "female_chol".
