@@ -24,9 +24,15 @@ Hint: check out the "?table" function for category counting.
 3. Consider only <font color="red">red</font> magic beans. Are size categories equally distributed?
 Hint: Check out th North vs. South rivers example for ideas on how to filter your data.
 
-3. Does the colour of the bean influence its size? Or are size and colour independent? Describe H0.
+4. Does the colour of the bean influence its size? Or are size and colour independent? Describe H0.
 
-4. A spy droid controlled by the rebel aliance has infiltarted an imperial star destroyer class ship. In order to avoid detection, it dodged all contact with resident troopers, but was nevertheless caught and destroyed. Before destruction, however it was able to transmit information from the equipment room it passed through. It counted several battle gear packages that included "TIE fighter pilot gear" (89 pacakges), "Storm trooper armor" (322 packages), "AT-AT crew helmets" (16 packages). Past inteligence has shown that imperial star destroyers ready for ground strikes normally carry a porportion of 5 "TIE Fighters" for every "AT-AT walker" and for every squad of 15 "Storm troopers". If the number of "TIE fighters" is much higer than this, an air strike should be expected instead. Based on what the spy droid transitted, should the resistance base prepare thenselves for an air, or for a ground attack?
+5. A spy droid controlled by the rebel aliance has infiltarted an imperial star destroyer class ship. In order to avoid detection, it dodged all contact with resident troopers, but was nevertheless caught and destroyed. Before destruction, however it was able to transmit information from the equipment room it passed through. It counted several battle gear packages that included "TIE fighter pilot gear" (89 pacakges), "Storm trooper armor" (322 packages), "AT-AT crew helmets" (16 packages). Past inteligence has shown that imperial star destroyers ready for ground strikes normally carry a porportion of 5 "TIE Fighters" for every "AT-AT walker" and for every squad of 15 "Storm troopers". If the number of "TIE fighters" is much higer than this, an air strike should be expected instead. Based on what the spy droid transitted, should the resistance base prepare thenselves for an air, or for a ground attack?
 
 ## 3. Regression analysis
 
+1. R has some built in data that we can use. Let's look at the dataset "faithful". There are two observation variables in the data set. The first one, called eruptions, is the duration of the geyser eruptions. The second one, called waiting, is the length of waiting period until the next eruption.
+Draw a correlation plot based on this data.
+
+2. What is the strength of the correlation? Is it significant? (consider alpha=0.05)
+
+3. Draw a regression line in the plot.
