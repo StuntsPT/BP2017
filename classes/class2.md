@@ -51,6 +51,12 @@ legend("topright", inset=.05, title="Distributions",
        labels, lwd=2, col=colors)
 ```
 
+|||
+
+### The Null hypothesis
+
+"The number of observatons in each category are not different from the expectation" <!-- .element: class="fragment" data-fragment-index="1" -->
+
 ---
 
 ### Example
@@ -212,6 +218,12 @@ colnames(side_effects_matrix) = c("No.side.effects",
 chisq.test(side_effects_matrix,
            correct=TRUE)
 ```
+
+|||
+
+### The Null hypothesis
+
+"The relative porportions of the variables are independent from each other" <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
