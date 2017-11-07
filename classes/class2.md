@@ -91,7 +91,7 @@ chisq.test(x=obs, p=exp)
 
 ### Multiple testing example
 
-* Suppose we have flowers where allele determine colour <font color="red">AA</font>, <font color="pink">Aa</font>, <font color="white">aa</font>.
+* Suppose we have flowers where alleles determine colour <font color="red">AA</font>, <font color="pink">Aa</font>, <font color="white">aa</font>.
 	* F1 contains <font color="red">1300</font>, <font color="pink">3000</font>, <font color="white">1500</font>
 	* This trait has Mendelian inheritance <!-- .element: class="fragment" data-fragment-index="1" -->
 	* All F0 males are white <!-- .element: class="fragment" data-fragment-index="2" -->
