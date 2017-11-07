@@ -350,6 +350,13 @@ abline(lm(height ~ bodymass))
 
 ---
 
+### The Null hypothesis
+
+The slope of the best-fit line is == 0. <!-- .element: class="fragment" data-fragment-index="1" -->
+As the variable in the "X" axis increases, the variable in the "Y" axis neither increases nor decreases. <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
 ### A word of caution
 
 ## <font color="red">Correlation does not imply causation</font> <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -409,10 +416,10 @@ Correlation & regression analyses
 
 ```R
 # Correlation
-cor.test( ~ Species + Latitude,
-          data=Data,
-          method = "pearson",
-          conf.level = 0.95)
+cor.test(x=Data$Species,
+         y=Data$Latitude,
+         method = "pearson",
+         conf.level = 0.95)
 
 # Regression
 model = lm(Species ~ Latitude,
@@ -442,4 +449,7 @@ abline(int, slope,
 
 ---
 
+### Reference
+
+[Handbook of Biological Statistics](http://www.biostathandbook.com)
 
