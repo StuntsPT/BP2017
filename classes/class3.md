@@ -24,9 +24,41 @@
 ### When is a PCA useful?
 
 * If data simplification is required (reduce computational time)
-* If variables are highly correlated
-*  
+* If variables are highly correlated <!-- .element: class="fragment" data-fragment-index="1" -->
+* If dealing with 3 or higher dimensional data <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
-### When can a PCA be performed?
+### How does a PCA 'work'?
+
+* Uses orthogonal transformation
+* Converts possibly correlated variables into uncorrelated <!-- .element: class="fragment" data-fragment-index="1" -->
+* The new variables are called "principal components" (PCs) <!-- .element: class="fragment" data-fragment-index="2" -->
+* The PCs are sorted by the amount of variability they explain <!-- .element: class="fragment" data-fragment-index="3" -->
+
+[Would you like to know more?](https://tgmstat.wordpress.com/2013/11/21/introduction-to-principal-component-analysis-pca/) <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
+### In practice...
+
+```R
+# Get some data
+wine <- read.table("http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data", sep=",")
+
+# Add column names
+colnames(wine) <- c("Cultivar","Alcohol","Malic acid","Ash","Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "OD280/OD315 of diluted wines", "Proline")
+
+# The first column corresponds to the cultivar class
+cultivar_classes <- factor(wine$Cultivar)
+
+winePCA <- prcomp(scale(wine[,-1]))
+plot(winePCA$x[,1:2], col = cultivar_classes, main="PCA test plot")
+legend("bottomright", legend = c("Cv1","Cv2","Cv3"), pch = 1, col = c("black","red","green"))
+```
+
+---
+
+### PCAs can take us further, though
+
+#### Introducing [BioConductor](https://bioconductor.org/) <!-- .element: class="fragment" data-fragment-index="1" -->
