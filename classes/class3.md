@@ -59,6 +59,22 @@ legend("bottomright", legend = c("Cv1","Cv2","Cv3"), pch = 1, col = c("black","r
 
 ---
 
-### PCAs can take us further, though
+### PCAs can take us further, but not in "plain" R
 
-#### Introducing [BioConductor](https://bioconductor.org/) <!-- .element: class="fragment" data-fragment-index="1" -->
+#### Introducing <!-- .element: class="fragment" data-fragment-index="1" --> 
+
+####[BioConductor](https://bioconductor.org/) <!-- .element: class="fragment" data-fragment-index="1" -->
+
+|||
+
+### When "vanilla" R just isn't enough
+
+* One of the good things about R is it's expandability
+* It is possible to "import" thousands of external 3rd party packages <!-- .element: class="fragment" data-fragment-index="1" -->
+* Bioconductor is more than just a package. It's a 3rd party package repository <!-- .element: class="fragment" data-fragment-index="2" -->
+	* It hosts 1473 bioinformatics related packages (at the time of writing) <!-- .element: class="fragment" data-fragment-index="3" -->
+	* It is very easy to use directly from R <!-- .element: class="fragment" data-fragment-index="4" -->
+
+---
+
+
