@@ -40,9 +40,54 @@
 	* This dendrogram will display the distance between the objects in a graphical manner <!-- .element: class="fragment" data-fragment-index="3" -->
 * Exploratory technique! <!-- .element: class="fragment" data-fragment-index="4" -->
 
+[Know more](https://davetang.org/muse/2013/08/15/distance-matrix-computation/) <!-- .element: class="fragment" data-fragment-index="5" -->
+
+|||
+
+### A simple example
+
+Euclidian distances!
+
+![Euclidian_dist](C3_assets/euclidian.png) 
+
+```R
+euclidean_distance = function(p,q){
+    sqrt(sum((p - q)^2))
+}
+```
+
+|||
+
+### A simple example
+
+```R
+set.seed(123)
+scater_data = data.frame(x=sample(1:10000,7), 
+                         y=sample(1:10000,7))
+
+scp = plot(x=scater_data$x, y=scater_data$y, col=1:7, pch=19)
+
+legend("topleft",
+       legend = c(row.names(scater_data)),
+       pch = 19,
+       col = c(1:7))
+```
+
+|||
+
+### A simple example
+
+```R
+euclidean_distance(scater_data[1,], scater_data[2,])
+
+dist(scater_data)
+
+plot(hclust(dist(scater_data),method="complete"))
+```
+
 ---
 
-### An example
+### A worked example
 
 * Suppose we have some students and their respective grades
 * We need to quickly view who has good and poor grades <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -143,7 +188,7 @@ legend("bottomright", legend = c("Cv1","Cv2","Cv3"), pch = 1, col = c("black","r
 
 #### Introducing <!-- .element: class="fragment" data-fragment-index="1" --> 
 
-####[BioConductor](https://bioconductor.org/) <!-- .element: class="fragment" data-fragment-index="1" -->
+[BioConductor](https://bioconductor.org/) <!-- .element: class="fragment" data-fragment-index="1" -->
 
 |||
 
