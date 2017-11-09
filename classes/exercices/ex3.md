@@ -10,7 +10,7 @@ Link 1 - [War of the 5 kings](https://raw.githubusercontent.com/chrisalbon/war_o
 
 1. As before, take a look at the data directly in R. Make sure you understand what the data file is about.
 
-2. Make a bar plot of the number of battles per location (remember the `table` function)
+2. Make a bar plot of the number of battles per ~location~ region (remember the `table` function).
 
 3. Historically, when an army attacks, its commander expects a victory, which means battle odds usually favour the attackers (assume a ratio of 10:1 for attacker victory). Is this also true for the "War of 5 Kings"? Define H0.
 
