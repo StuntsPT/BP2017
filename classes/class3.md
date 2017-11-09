@@ -52,7 +52,10 @@ Euclidian distances!
 
 ```R
 euclidean_distance = function(p,q){
-    sqrt(sum((p - q)^2))
+
+    result = sqrt(sum((p - q)^2))
+
+    return(result)
 }
 ```
 
