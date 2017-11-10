@@ -41,12 +41,19 @@ library("cluster")
 
 # 2.4
 View(plantTraits)
-plot(hclust(dist(plantTraits)),
+
+dist_matrix = dist(plantTraits)
+cluster = hclust(dist_matrix)
+
+plot(cluster,
      main="Dendrogram of 'plantTraits' data",
      xlab="Plants")
 
 # 2.5
-plot(hclust(dist(plantTraits[plantTraits[, "height"] > 6,])),
+dist_matrix = dist(plantTraits[plantTraits[, "height"] > 6,])
+cluster = hclust(dist_matrix)
+
+plot(cluster,
      main="Dendrogram of 'plantTraits' whose height is above '6'",
      xlab="Plants")
 
