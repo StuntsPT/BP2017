@@ -245,5 +245,59 @@ dist_matrix = dist(plantTraits)
 cluster = hclust(dist_matrix)
 
 plot(cluster)
+```
 
+---
+
+### Save your plots
+
+```R
+dist_matrix = dist(plantTraits)
+cluster = hclust(dist_matrix)
+
+plot(cluster)
+
+```
+
+Vs.
+
+```R
+dist_matrix = dist(plantTraits)
+cluster = hclust(dist_matrix)
+
+png(filename="/path/to/file/directory/name.png")
+plot(cluster)
+dev.off()
+```
+
+---
+
+## Practical example
+
+---
+
+### Automating a common task
+
+```R
+army_size = function(data_url, alpha) {
+    war_data = read.csv(url(data_url), header=TRUE, row.names=1)
+        
+    attacker_norm = shapiro.test(war_data$attacker_size)$p.value
+    defender_norm = shapiro.test(war_data$defender_size)$p.value
+
+    if (attacker_norm <= alpha | defender_norm <= alpha){
+        p_val = wilcox.test(x=war_data$attacker_size, y=war_data$defender_size)$p.value
+    } else {
+        p_val = t.test(x=war_data$attacker_size, y=war_data$defender_size)$p.value
+    }
+					        
+    if (p_val <= alpha) {
+        answer = "Reject H0: there are significant differences between the size of attacking and defending armies"
+    } else {
+        answer = "Do not reject H0: there are no significant differences between the size of attacking and defending armies"
+    }
+    return(answer)
+}
+
+print(army_size("https://raw.githubusercontent.com/chrisalbon/war_of_the_five_kings_dataset/master/5kings_battles_v1.csv", 0.05))
 ```
