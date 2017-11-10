@@ -307,3 +307,22 @@ army_size = function(data_url, alpha) {
 
 print(army_size("https://raw.githubusercontent.com/chrisalbon/war_of_the_five_kings_dataset/master/5kings_battles_v1.csv", 0.05))
 ```
+
+---
+
+### Before we are done
+
+```R
+sorteio = function(names_file, seed) {
+    names = read.csv(names_file,
+                     header=FALSE)
+
+    set.seed(seed)
+
+    shuffled_names = as.data.frame(sample(t(names)))
+
+    return(shuffled_names)
+}
+
+print(sorteio("https://raw.githubusercontent.com/StuntsPT/BP2017/master/classes/C4_assets/nomes.txt", 12345))
+```
