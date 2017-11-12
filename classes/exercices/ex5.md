@@ -31,9 +31,10 @@ Is the number of deaths due to malaria different between 2003 and 2005?
 | Gurdyroot            | 28              | 9       |
 
 
-Based on this data, can you make a statistically informed assessment regarding the cause of the incident?
+Based on this data, can you make a statistically informed assessment regarding the cause of the incident? Define your test's H0.
 
 Hint: This is not as complex as it looks at first.
+
 
 ## 2. Regression & correlation
 
@@ -45,6 +46,7 @@ Hint: This is not as complex as it looks at first.
 
 4. Draw a trend plot (mean over time) to help determine if malaria cases are increasing or decreasing worldwide. Do the same for malaria deaths.
 Hint: If you use a function for this, it will really make your life easier.
+
 
 ## 3. Exploratory data analysis
 
