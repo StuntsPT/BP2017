@@ -41,6 +41,7 @@ Hint: This is not as complex as it looks at first.
 Once again, load the following two datafiles into R: [Number of Malaria cases](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWczfPHQMiqxCg&output=csv), [Number of Malaria deaths](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWfZGL9qouvTbQ&output=xlsx).
 
 1. Are the number of Malaria deaths and cases correlated? Draw the scatter plot, including a regression line. Do not assume data normality - test for it.
+
 Hints: The dataset for "malaria cases" has some counties not present in the "malaria deaths" one. You can use the subset function to delete any coulmns not present on both datasets `malaria_cases = subset(malaria_cases, row.names(malaria_cases) %in% row.names(malaria_deaths))`. Also note that in order to perform the correlation analysis, you should coerce your datasets into matrices using as.matrix(malaria_deaths)
 
 2. Describe H0 from the previous task.
@@ -48,7 +49,8 @@ Hints: The dataset for "malaria cases" has some counties not present in the "mal
 3. Automate the procedure in **2.1** using a function. Make sure the plot is also drawn automatically and saved to the disk. This function should return the *p*-value of the correlation and the "r" value in any way you see fit.
 
 4. Draw a trend plot (total cases over time) to help determine if malaria cases are increasing or decreasing worldwide. Do the same for malaria deaths.
-Hint: If you use a function for this, it will really make your life easier. Also note that since the datasets contain missing data (NA) you should use the argument `na.rm=TRUE` when performing the `sum` function.
+
+Hints: If you use a function for this, it will really make your life easier. Also note that since the datasets contain missing data (NA) you should use the argument `na.rm=TRUE` when performing the `sum` function.
 
 
 ## 3. Exploratory data analysis
