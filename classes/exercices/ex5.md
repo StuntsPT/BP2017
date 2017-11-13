@@ -8,10 +8,10 @@ You will have to do this for your exam anyway.
 
 ## 1. Hypothesis tests
 
-1. Go back to [Exercise 1](ex1.html), and the plots of 1.3. Write a functions that draws such plot (mean and median).
+1. Go back to [Exercises 1](ex1.html), and the plots of 1.3. Write a functions that draws the requested plot (mean and median).
 This function will have to:
 * Be able to draw the plots for both men and women
-* Save the plot as a png or JPEG image automatically (and the location to save the file has to be chosen when invoking the function)
+* Save the plot as a *png* or *JPEG* image automatically (and the location to save the file has to be chosen when invoking the function)
 * Have different labels for the different plots
 
 2. Load the following two datafiles into R: [Number of Malaria cases](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWczfPHQMiqxCg&output=csv), [Number of Malaria deaths](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWfZGL9qouvTbQ&output=xlsx).
@@ -38,11 +38,13 @@ Hint: This is not as complex as it looks at first.
 
 ## 2. Regression & correlation
 
+Once again, load the following two datafiles into R: [Number of Malaria cases](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWczfPHQMiqxCg&output=csv), [Number of Malaria deaths](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWfZGL9qouvTbQ&output=xlsx).
+
 1. Are the number of Malaria deaths and cases correlated? Draw the scatter plot, including a regression line. Do not assume data normality - test for it.
 
 2. Describe H0 from the previous task.
 
-3. Automate the procedure in **2.1** by writing a function that will automate the procedure. Make sure the plot is also drawn automatically and saved to the disk. This function should return the *p*-value of the correlation and the "r" value.
+3. Automate the procedure in **2.1** using a function. Make sure the plot is also drawn automatically and saved to the disk. This function should return the *p*-value of the correlation and the "r" value in any way you see fit.
 
 4. Draw a trend plot (mean over time) to help determine if malaria cases are increasing or decreasing worldwide. Do the same for malaria deaths.
 Hint: If you use a function for this, it will really make your life easier.
