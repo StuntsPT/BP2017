@@ -41,6 +41,7 @@ Hint: This is not as complex as it looks at first.
 Once again, load the following two datafiles into R: [Number of Malaria cases](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWczfPHQMiqxCg&output=csv), [Number of Malaria deaths](http://docs.google.com/spreadsheet/pub?key=pp59adS3CHWfZGL9qouvTbQ&output=xlsx).
 
 1. Are the number of Malaria deaths and cases correlated? Draw the scatter plot, including a regression line. Do not assume data normality - test for it.
+Hints: The dataset for "malaria cases" has some counties not present in the "malaria deaths" one. You can use the subset function to delete any coulmns not present on both datasets `malaria_cases = subset(malaria_cases, row.names(malaria_cases) %in% row.names(malaria_deaths))`. Also note that in order to perform the correlation analysis, you should coerce your datasets into matrices using as.matrix(malaria_deaths)
 
 2. Describe H0 from the previous task.
 
