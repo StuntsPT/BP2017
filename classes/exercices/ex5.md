@@ -61,4 +61,4 @@ Hint: If you use a function for this, it will really make your life easier.
 
 ## 4. Automation & Reproducibility
 
-
+1. Write a function that compares a dataset of values with a single value. The function should take as many arguments as you deem necessary, and return whether there are significant differences between the sample and the value. It should also be able to determine which test to perform (parametric or non-parametric). The alpha value for the parameter testing does not have to be the same as for the sample test (both need to be defined during the function invocation).
