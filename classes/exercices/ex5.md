@@ -50,6 +50,13 @@ Hint: If you use a function for this, it will really make your life easier.
 
 ## 3. Exploratory data analysis
 
+1. Load [this](https://datastore.landcareresearch.co.nz/dataset/43d27a6e-544a-4134-b19f-12c78e6a5652/resource/aa238833-e9e8-4ac1-8ba7-ae2737e0f7f3/download/april-dvp.csv) datafile into R. It contains plant traits measured for [an ecological study](https://catalogue.data.govt.nz/dataset/plant-trait-and-ecosystem-function-data-from-an-intensively-grazed-grassland). Use this file to plot a PCA. Use the variable "base_grass" as a discriminant. 
+
+2. Do the plants group by this discriminant?
+
+3. Which variables seem to be most associated with PC1? What about PC2? Draw the factor loadings plot.
+
+4. How much variance is explained by each of the Principal Components? 
 
 
 ## 4. Automation & Reproducibility
