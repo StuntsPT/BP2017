@@ -36,8 +36,8 @@ chisq.test(x=colour_observations, p=colour_expectations)
 # 2.2
 p_vals = c()
 for (i in 1:length(colour_expectations)) {
-    partial_obs = c(colour_observations[i], sum(colour_observations[-1]))
-    partial_exp = c(colour_expectations[i], sum(colour_expectations[-1]))
+    partial_obs = c(colour_observations[i], sum(colour_observations[-i]))
+    partial_exp = c(colour_expectations[i], sum(colour_expectations[-i]))
 
     partial_chisq = chisq.test(x=partial_obs, p=partial_exp)
 
