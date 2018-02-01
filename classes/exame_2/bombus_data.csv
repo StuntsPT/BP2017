@@ -1,1 +1,155 @@
-Placeholder
+Species,Sampling site,Latitude,Longitude,N,AR,HE
+B. occidentalis,"Arctic Circle, AK",66.7106,−150.6728,32,3.91,0.518
+B. occidentalis,"Fairbanks, AK",65.1772,−148.0774,14,3.85,0.54
+B. occidentalis,"North Pole, AK",64.6401,−146.8650,25,3.91,0.532
+B. occidentalis,"Sourdough Creek, AK",62.5259,−145.5147,19,3.92,0.556
+B. occidentalis,"Yukon River, AK,",65.8809,−149.7271,34,4.11,0.581
+B. occidentalis,"Yukon River 2, AK",65.8186,−149.4656,22,4.01,0.561
+B. occidentalis,"Boulder, CO",40.3918,−105.4876,7,4.01,0.607
+B. occidentalis,"Gunnison + Chafee, CO",38.8801,−106.4743,25,4,0.59
+B. occidentalis,"Cascade + Gallatin, MT",45.8013,−110.9741,8,4.17,0.601
+B. occidentalis,"Flathead, MT",48.3045,−113.9841,5,4,0.572
+B. occidentalis,"Klamath + Jackson + Lake, OR",42.2858,−121.7228,15,3.88,0.582
+B. occidentalis,"Box Elder, UT",41.9491,−113.3495,12,3.5,0.516
+B. occidentalis,"Wasatch + Daggett, UT",40.9808,−110.9550,12,4.09,0.591
+B. bifarius,"Delta, AK",64.037,−145.7390,15,3.85,0.552
+B. bifarius,"Mariposa, CA",37.7739,−119.3249,12,4.41,0.611
+B. bifarius,"Boulder, CO",39.9404,−105.5595,10,4.42,0.599
+B. bifarius,"Gunnison, CO",38.323,−107.4761,18,4.65,0.638
+B. bifarius,"Ouray, CO",38.0017,−107.6943,8,4.36,0.613
+B. bifarius,"Boundary, ID",48.8529,−116.2790,11,4.91,0.634
+B. bifarius,"Deer Lodge, MT",45.8387,−113.4375,10,4.54,0.611
+B. bifarius,"Flathead, MT",48.3045,−113.9841,22,4.69,0.622
+B. bifarius,"Missoula, MT",46.7082,−114.5266,31,4.64,0.62
+B. bifarius,"Ravalli, MT",45.6922,−113.9524,24,4.56,0.613
+B. bifarius,"Elko, NV",40.6642,−115.4472,5,4.11,0.573
+B. bifarius,"Baker, OR",45.0065,−117.5794,28,4.69,0.619
+B. bifarius,"Douglas, OR",43.3194,−122.1884,20,4.76,0.633
+B. bifarius,"Hood River, OR",45.3251,−121.6360,22,4.56,0.614
+B. bifarius,"Jackson, OR",42.0835,−122.7306,10,4.86,0.618
+B. bifarius,"Klamath, OR",42.3893,−122.2148,9,4.74,0.642
+B. bifarius,"Lake, OR",42.1836,−120.3490,12,4.72,0.645
+B. bifarius,"Umatilla, OR",45.7762,−118.0818,11,4.89,0.642
+B. bifarius,"Box Elder, UT",41.9491,−113.3495,20,4.64,0.609
+B. bifarius,"Cache, UT",41.8944,−111.6425,16,4.36,0.584
+B. bifarius,"Daggett, UT",40.8836,−109.8066,7,4.4,0.586
+B. bifarius,"Garfield, UT",37.9638,−111.7195,20,4.54,0.625
+B. bifarius,"Asotin, WA",46.1083,−117.2458,17,4.61,0.61
+B. bifarius,"Chelan, WA",47.6376,−120.4418,13,4.79,0.65
+B. bifarius,"Columbia, WA",46.0934,−117.8767,6,4.61,0.601
+B. bifarius,"Okanogan, WA",48.5993,−120.5442,20,4.76,0.645
+B. bifarius,"Yakima, WA",46.6384,−121.3897,19,4.67,0.627
+B. bifarius,"Albany, WY",41.3464,−106.1843,18,4.67,0.638
+B. bifarius,"Teton, WY",43.7801,−110.9630,19,4.52,0.61
+B. bifarius,"Washakie, WY",44.1649,−107.2138,19,4.61,0.629
+B. bifarius,"Orcas Island, WA‡",48.6411,−122.9768,12,3.63,0.522
+B. bifarius,"San Juan Island, WA‡",48.5064,−123.1406,13,3.48,0.512
+B. bifarius,"Victoria, BC‡",48.4669,−123.4663,9,3.52,0.513
+B. vosnesenskii,"Mariposa, CA",37.7992,−119.8656,26,3.78,0.679
+B. vosnesenskii,"Placer, CA",40.8777,−121.5605,10,4.06,0.708
+B. vosnesenskii,"San Benito, CA",36.4713,−121.1932,25,3.99,0.689
+B. vosnesenskii,"Siskiyou, CA",41.9658,−123.5029,19,3.72,0.652
+B. vosnesenskii,"Siskiyou 2, CA",41.3055,−122.7847,15,3.84,0.69
+B. vosnesenskii,"Clark, NV",36.1545,−115.5719,11,3.84,0.676
+B. vosnesenskii,"Coos, OR",43.2717,−124.2616,18,3.92,0.705
+B. vosnesenskii,"Deschutes, OR",44.2436,−121.6965,35,3.82,0.673
+B. vosnesenskii,"Jackson, OR",42.0835,−122.7306,43,3.75,0.669
+B. vosnesenskii,"Klamath, OR",42.3893,−122.2148,22,3.98,0.711
+B. vosnesenskii,"Lake, OR",42.1836,−120.3490,18,3.65,0.659
+B. vosnesenskii,"Clallam, WA",48.0271,−123.3351,21,3.65,0.618
+B. vosnesenskii,"King, WA",47.54,−122.3000,14,3.73,0.653
+B. vosnesenskii,"Lewis, WA",46.5382,−122.1082,18,3.61,0.661
+B. vosnesenskii,"Thurston, WA",46.9606,−123.1023,15,3.72,0.64
+B. vosnesenskii,"San Juan Island, WA‡",48.4775,−123.0644,9,3.59,0.634
+B. pensylvanicus,"Ozark N.F., AR",36.1015,−94.4352,6,3.87,0.594
+B. pensylvanicus,"Murphysboro, IL",37.7735,−89.4186,10,3.76,0.576
+B. pensylvanicus,"Taylorville, IL",39.5248,−89.3284,12,3.76,0.559
+B. pensylvanicus,"Galton, IL",39.7606,−88.2974,13,3.88,0.576
+B. pensylvanicus,"Shawnee N.F., IL",37.3793,−88.5923,8,4.02,0.587
+B. pensylvanicus,"Sand Ridge S.P., IL",40.3004,−89.8433,9,3.8,0.55
+B. pensylvanicus,"Pesotum, IL",39.9372,−88.2706,5,4.27,0.56
+B. pensylvanicus,"Williamstown, KS",39.1443,−95.5016,23,4.08,0.577
+B. pensylvanicus,"Council Grove Lake, KS",38.4647,−99.1695,8,3.93,0.589
+B. pensylvanicus,"Barksdale AFB, LA",32.5258,−93.6794,8,3.82,0.567
+B. pensylvanicus,"Bienville, LA",32.2689,−93.0218,30,3.79,0.563
+B. pensylvanicus,"Billings, MO",36.9619,−93.6843,18,4.13,0.596
+B. pensylvanicus,"Rocheport, MO",38.9897,−92.5157,11,3.83,0.534
+B. pensylvanicus,"West Point, MS",33.5544,−88.6417,22,3.78,0.555
+B. pensylvanicus,"Ord, NE",41.7404,−98.8093,9,4.03,0.594
+B. pensylvanicus,"Wichita Mts., OK",34.7842,−98.5135,10,3.87,0.549
+B. pensylvanicus,"Norman, OK",35.1892,−97.3647,17,4.1,0.592
+B. pensylvanicus,"Mead, OK",33.9987,−96.5354,6,3.79,0.581
+B. pensylvanicus,"Pierre, SD",44.2907,−100.3331,13,3.91,0.571
+B. pensylvanicus,"Viborg, SD",43.1921,−97.0808,12,3.91,0.554
+B. pensylvanicus,"Austin, TX",30.1856,−97.8705,11,3.94,0.547
+B. pensylvanicus,"Elgin, TX",30.3509,−97.4504,20,3.93,0.58
+B. pensylvanicus,"Big Thicket N.P., TX",30.6711,−94.7184,7,3.77,0.55
+B. pensylvanicus,"Rising Star, TX",32.0995,−98.9643,8,4.1,0.585
+B. pensylvanicus,"Galveston Island, TX‡",29.095,−95.1042,6,2.71,0.439
+B. impatiens,"Greenville, AL",31.8543,−86.6413,13,4.92,0.702
+B. impatiens,"Devil’s Den S.P., AR",35.8207,−94.1590,22,4.84,0.711
+B. impatiens,"Ball Ground, GA",34.2657,−84.2724,10,4.53,0.676
+B. impatiens,"Oskaloosa, IA",41.3298,−92.6473,15,4.85,0.687
+B. impatiens,"Charles City, IA",43.0656,−92.6489,10,4.48,0.682
+B. impatiens,"Murphysboro, IL",37.7735,−89.4186,20,4.76,0.707
+B. impatiens,"Sand Ridge S.P., IL",40.3902,−89.8584,28,4.86,0.697
+B. impatiens,"Urbana, IL",40.0833,−88.2025,13,4.85,0.702
+B. impatiens,"Bluff Spring Fen, IL",42.0138,−88.2520,23,4.9,0.714
+B. impatiens,"Taylorville, IL",39.5248,−89.3284,15,4.9,0.707
+B. impatiens,"Shawnee N.F., IL",37.3793,−88.5923,14,4.75,0.668
+B. impatiens,"Alamo, IN",39.9602,−87.0686,23,4.7,0.688
+B. impatiens,"Newton-Stewart S.R.A., IN",38.404,−86.6613,23,4.71,0.676
+B. impatiens,"Nebraska, IN",39.0653,−85.4376,24,4.83,0.694
+B. impatiens,"Winamac, IN",41.0231,−86.5835,20,4.62,0.672
+B. impatiens,"Wellesley, MA",42.2912,−71.3191,23,4.83,0.685
+B. impatiens,"Sakatah Lake S.P., MN",44.2196,−93.5228,12,4.99,0.719
+B. impatiens,"Great River Bluffs S.P., MN",43.9752,−91.4277,16,4.66,0.671
+B. impatiens,"Atlanta, MO",39.8987,−92.4737,11,4.51,0.66
+B. impatiens,"Wadesboro, NC",35.0436,−80.0250,18,4.68,0.697
+B. impatiens,"Mount Mitchell, NC",35.745,−82.2776,27,4.49,0.666
+B. impatiens,"Branched Oak Lake, NE",40.96,−96.8638,18,4.82,0.683
+B. impatiens,"Plattsmouth, NE",40.9998,−95.8726,6,4.72,0.682
+B. impatiens,"Wading River, Long Isl., NY",40.9444,−72.8361,16,4.93,0.707
+B. impatiens,"Stony Brook, Long Isl., NY",40.9239,−73.1238,23,4.64,0.681
+B. impatiens,"Fletcher, OH",40.0979,−84.1159,20,4.81,0.696
+B. impatiens,"Sinnemahoning S.P., PA",41.4028,−78.0264,29,4.7,0.693
+B. impatiens,"Big Thicket N.P., TX",30.6711,−94.7184,5,5,0.682
+B. impatiens,"Pamplin City, VA",37.2557,−78.6809,20,4.85,0.689
+B. impatiens,"Sparta, WI",43.9427,−90.7490,23,4.65,0.672
+B. impatiens,"Wisonsin Dells, WI",43.6265,−89.8061,22,4.77,0.681
+B. impatiens,"UW-Madison, WI",43.041,−89.4315,23,4.8,0.702
+B. impatiens,"Dauphin Island, AL‡",30.2548,−88.1122,11,4,0.636
+B. bimaculatus,"Pella, IA",41.4071,−92.8710,19,4.6,0.678
+B. bimaculatus,"Murphysboro, IL",37.7735,−89.4186,22,4.74,0.71
+B. bimaculatus,"Castle Rock S.P., IL",41.9783,−89.3570,15,4.73,0.688
+B. bimaculatus,"IL Beach S.P., IL",42.4605,−88.1922,9,4.71,0.689
+B. bimaculatus,"Alamo, IN",39.9602,−87.0686,17,4.7,0.684
+B. bimaculatus,"Nebraska, IN",39.0653,−85.4376,13,4.79,0.699
+B. bimaculatus,"Winamac, IN",41.0231,−86.5835,25,4.91,0.714
+B. bimaculatus,"Frankfort, KY",38.1641,−84.9442,9,4.86,0.728
+B. bimaculatus,"Ashby, MA",42.6797,−71.8281,12,4.81,0.691
+B. bimaculatus,"Ashley Falls, MA",42.0654,−73.3283,22,4.88,0.69
+B. bimaculatus,"Red Wing, MN",44.5577,−92.4883,18,4.52,0.655
+B. bimaculatus,"Sakatah S.P., MN",44.2196,−93.5228,20,4.71,0.69
+B. bimaculatus,"Shaw Reserve 1, MO",38.4834,−90.8230,10,4.48,0.695
+B. bimaculatus,"Shaw Reserve 2, MO",38.4682,−90.8174,10,4.89,0.715
+B. bimaculatus,"Litzinger Prairie, MO",38.6226,−90.3771,11,4.6,0.698
+B. bimaculatus,"Billings, MO",37.0566,−93.5678,6,4.89,0.688
+B. bimaculatus,"Westfield, NC",36.4704,−80.3947,6,4.58,0.664
+B. bimaculatus,"Marion, NC",35.8935,−81.9367,6,4.72,0.702
+B. bimaculatus,"Plattsmouth, NE",40.9998,−95.8726,7,4.81,0.686
+B. bimaculatus,"Dannebrog, NE",41.1255,−98.5542,10,4.19,0.646
+B. bimaculatus,"Seneca Lake, NY",42.6817,−76.8511,9,4.71,0.68
+B. bimaculatus,"Wading River, Long Isl., NY",40.9444,−72.8361,6,4.51,0.682
+B. bimaculatus,"Stony Brook, Long Isl., NY",40.9239,−73.1238,6,4.84,0.711
+B. bimaculatus,"Oak Harbor, OH",41.4938,−83.2199,18,4.52,0.668
+B. bimaculatus,"Wooster, OH",40.9082,−81.9792,18,4.61,0.68
+B. bimaculatus,"Sinnemahoning S.P., PA",41.4028,−78.0264,28,4.77,0.692
+B. bimaculatus,"DeSmet, SD",44.3717,−97.5246,13,4.55,0.694
+B. bimaculatus,"Cherokee N.F., TN",35.9228,−82.9772,17,4.81,0.697
+B. bimaculatus,"Coker Creek, TN",35.241,−84.3182,14,4.68,0.696
+B. bimaculatus,"Big Reed Island Creek, VA",36.7229,−80.5809,5,4.45,0.675
+B. bimaculatus,"Ludlow, VT",43.4144,−72.7055,7,4.73,0.685
+B. bimaculatus,"Wilmington, VT",42.8884,−72.8616,13,4.82,0.698
+B. bimaculatus,"Wyeville, WI",44.03,−90.4203,16,4.97,0.721
+B. bimaculatus,"Wisconsin Dells, WI",43.6422,−89.8111,11,4.66,0.686
